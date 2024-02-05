@@ -1,3 +1,5 @@
+// Achievements/awards Carousel
+
 import { Container } from "react-bootstrap";
 import meter2 from "../assets/img/appreciations/spotlight2022.png";
 import meter1 from "../assets/img/appreciations/GL_spotlight_of_the_month.png";
@@ -30,8 +32,7 @@ export const ImageSlider = () => {
           infinite={true}
           autoPlay={true} // Enable auto-scroll
           autoPlaySpeed={2000} // Set auto-scroll speed (in milliseconds)
-          className="owl-carousel owl-theme skill-slider"
-        >
+          className="owl-carousel owl-theme skill-slider">
           <div className="appreciation">
             <img src={meter2} alt="Image" />
             <h5 className="title">SPOTLIGHT AWARD </h5>

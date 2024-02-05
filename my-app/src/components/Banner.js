@@ -1,3 +1,5 @@
+// First Section - this contain Introduction
+
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
@@ -11,7 +13,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "Web Developer", "Frontend Developer", "UI Developer", "Softwear Developer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -56,7 +58,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm RIYA GAIROLA`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm RIYA GAIROLA`} <br /><span className="txt-rotate" dataPeriod="1000" data-rotate='{[  "Web Developer", "Frontend Developer", "UI Developer", "Softwear Developer" ]}'><span className="wrap">{text}</span></span></h1>
                   <p>I am a problem solver with a Bachelor’s degree in Computer Science with almost 5 years of experience creating user-friendly interfaces and responsive design for websites and mobile applications. Proficient in HTML, CSS, JavaScript, and React, I bring a keen eye for design and a collaborative spirit.</p>
                   <p><i> Passionate about developing beautiful experiences, I'm eager for opportunities that keep the UI spirit rolling, and the User Experience alive.</i></p>
                   <button onClick={() => window.location = 'mailto:gairolariya@gmail.com'}>Let’s Connect <ArrowRightCircle size={25} /></button>

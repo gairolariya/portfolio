@@ -564,6 +564,45 @@ article.post {
     font-weight: bold;
   }
 }
+
+/* Style for the paragraph */
+p.jobDetailsParagraph {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #B8B8B8;
+  /* Adjust the color as needed */
+  margin-bottom: 20px;
+  width: 90%;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Style for the list */
+.jobDetailsParagraph ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jobDetailsParagraph li {
+  margin: 12px;
+  position: relative;
+}
+
+/* Custom bullet for the list */
+.jobDetailsParagraph li::before {
+  content: '\2022';
+  /* Unicode character for a bullet point */
+  color: #007bff;
+  /* Bullet color */
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  position: absolute;
+}
+
 /************ Projects Css ************/
 .contact {
   /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
@@ -635,6 +674,7 @@ article.post {
 .contact form button:hover::before {
   width: 100%;
 }
+
 
 /************ Footer Css ************/
 .footer {

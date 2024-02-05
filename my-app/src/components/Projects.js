@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import { JobDetails } from "./JobDetails";
 import { ImageSlider } from "./ImageSlider";
 import projImg1 from "../assets/img/namshiNoon.png";
 import projImg2 from "../assets/img/GlobalLogic_BLK.jpg";
@@ -10,16 +11,14 @@ import CertificationsImg2 from "../assets/img/freecodecamp-vector-logo.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { renderParagraph } from "./ProjectCard";
 
 export const Projects = () => {
   
-  const [activeCard, setActiveCard] = useState(null);
+const [activeCard, setActiveCard] = useState(null);
 
-  const handleCardClick = (id) => {
-    // setActiveCard(activeCard === id ? null : id);
-        setActiveCard(id);
-  };
+const handleCardClick = (id) => {
+  setActiveCard(activeCard === id ? null : id);
+};
 
   const projects = [
     {
@@ -66,11 +65,21 @@ export const Projects = () => {
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
+                        {projects.map((project, index) => (
+                          <ProjectCard
+                            key={index}
+                            isActive={activeCard === project.id}
+                            handleCardClick={() => handleCardClick(project.id)}
+                            {...project}
+                          />
+                        ))}
+                      </Row>
+
+                      <div>
                         {
-                          projects.map((project, index) => {
+                          projects.map((project) => {
                             return (
-                              <ProjectCard
-                                key={index}
+                              <JobDetails
                                 isActive={activeCard === project.id}
                                 handleCardClick={() => handleCardClick(project.id)}
                                 {...project}
@@ -78,10 +87,7 @@ export const Projects = () => {
                             )
                           })
                         }
-                      </Row>
-                      {/* <Row>
-                            <ProjectCard.renderParagraph />
-                      </Row> */}
+                      </div>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
                     <div className="certificationsContainer">
