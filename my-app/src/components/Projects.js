@@ -8,7 +8,6 @@ import projImg2 from "../assets/img/GlobalLogic_BLK.jpg";
 import projImg3 from "../assets/img/AppDirect-Logo.jpg";
 import CertificationsImg1 from "../assets/img/udemy.png";
 import CertificationsImg2 from "../assets/img/freecodecamp-vector-logo.png";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -118,7 +117,6 @@ const handleCardClick = (id) => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
     </section>
   )
 }

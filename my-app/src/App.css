@@ -87,14 +87,6 @@ input:focus, textarea:focus, select:focus {
 		padding: 0 150px;
 	}
 }
-
-p.success {
-	color: green;
-}
-
-p.danger {
-	color: red;
-}
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
@@ -161,9 +153,7 @@ span.navbar-text {
 	z-index: 1;
 	transition: 0.3s ease-in-out;
 }
-.social-icon a:hover img {
-	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-}
+
 .navbar-text button {
   font-weight: 700;
   color: #fff;
@@ -197,51 +187,6 @@ span.navbar-text {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-}
-nav.navbar .navbar-toggler:active,
-nav.navbar .navbar-toggler:focus {
-	outline: none;
-    box-shadow: none;
-}
-nav.navbar .navbar-toggler-icon {
-  width: 24px;
-  height: 17px;
-  background-image: none;
-  position: relative;
-  border-bottom: 2px solid #fff;
-  transition: all 300ms linear;
-  top: -2px;
-}
-nav.navbar .navbar-toggler-icon:focus {
-	border-bottom: 2px solid #fff;
-}
-nav.navbar .navbar-toggler-icon:after,
-nav.navbar .navbar-toggler-icon:before {
-	width: 24px;
-	position: absolute;
-	height: 2px;
-	background-color: #fff;
-	top: 0;
-	left: 0;
-	content: '';
-	z-index: 2;
-	transition: all 300ms linear;
-}
-nav.navbar .navbar-toggler-icon:after {
-	top: 8px;
-}
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-	transform: rotate(45deg);
-	background-color: #fff;
-	height: 2px;
-}
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
-	transform: translateY(8px) rotate(-45deg);
-	background-color: #fff;
-	height: 2px;
-}
-nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-	border-color: transparent;
 }
 
 /************ Banner Css ************/
@@ -287,15 +232,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   align-items: center;
 }
-.banner button svg {
-  font-size: 25px;
-  margin-left: 10px;
-  transition: 0.3s ease-in-out;
-  line-height: 1;
-}
-.banner button:hover svg {
-  margin-left: 25px;
-}
+
 .banner img {
   animation: updown 3s linear infinite;
 }
@@ -330,7 +267,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .skill {
-  padding: 0 0 50px 0;
+  padding: 0 0 30px 0;
   position: relative;
   margin-top: 30px;
   background-color: #151515;
@@ -377,6 +314,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   width: 40%;
   z-index: -4;
+}
+
+.activements {
+  margin-top: 20px;
 }
 
 /************ Projects Css ************/
@@ -432,7 +373,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
 }
 .proj-imgbx.active {
-  border: 2px solid #007bff;
+  border: 5px solid #007bff;
   /* Change color as needed */
 }
 
@@ -678,15 +619,13 @@ p.jobDetailsParagraph {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+   margin: 30px;
   /* background-image: url('./assets/img/footer-bg.png'); */
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.footer img {
-  width: 26%;
+.footer .container {
+  display: flex;
+  flex-direction: row-reverse;
 }
 .footer p {
   font-weight: 400;

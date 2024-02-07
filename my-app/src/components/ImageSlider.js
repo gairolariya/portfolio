@@ -32,7 +32,7 @@ export const ImageSlider = () => {
           infinite={true}
           autoPlay={true} // Enable auto-scroll
           autoPlaySpeed={2000} // Set auto-scroll speed (in milliseconds)
-          className="owl-carousel owl-theme skill-slider">
+          className="owl-carousel owl-theme skill-slider activements">
           <div className="appreciation">
             <img src={meter2} alt="Image" />
             <h5 className="title">SPOTLIGHT AWARD </h5>
